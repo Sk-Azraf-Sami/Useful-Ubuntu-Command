@@ -31,3 +31,10 @@ find ~
 ```
 tree -a
 ```
+**Dual-boot boot menu does not show up** [source](https://askubuntu.com/questions/717904/dual-boot-boot-menu-does-not-show-up-after-installing-ubuntu-15-10-alongside-win)
+>1.On Windows 10, go to the start menu.<br>
+2.Search and open Recovery Options. The description for it should say System settings.<br>
+3.Under Advanced startup click Restart now.<br>
+4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
+5.Click Ubuntu and hopefully it should take you to the grub boot menu.
+
