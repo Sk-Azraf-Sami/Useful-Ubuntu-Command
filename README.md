@@ -38,3 +38,28 @@ tree -a
 4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
 5.Click Ubuntu and hopefully it should take you to the grub boot menu.
 
+# Useful Windows-10 Command:
+**Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
+Link: https://localhost:5500/em/login
+<blockquote>SQL*Plus: Release 21.0.0.0.0 - Production on Sat May 6 22:17:19 2023 <br>
+Version 21.3.0.0.0 <br>
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved. <br>
+
+<b>Enter user-name: system</b> <br>
+<b>Enter password: Pass7026</b> <br>
+Last Successful login time: Sat May 06 2023 22:13:28 +06:00 <br>
+
+Connected to: <br>
+Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production <br>
+Version 21.3.0.0.0 <br>
+
+SQL></blockquote>
+
+**Uninstall Oracle:** <br>
+[Uninstall](http://www.rebellionrider.com/how-to-uninstall-oracle-database-21c/) <br>
+[Error](https://stackoverflow.com/questions/64283161/oracle-19c-installation-error-ins-35179-current-available-memory-is-less-tha) <br>
+[Error](https://stackoverflow.com/questions/35347522/got-ins-35075-the-specified-sid-is-already-in-use-error-in-oracle-how-to-fix) <br>
+[Error](https://youtu.be/5EQ2ulnQsow)
+
+
