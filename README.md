@@ -68,4 +68,7 @@ SQL></blockquote>
 [Error](https://stackoverflow.com/questions/35347522/got-ins-35075-the-specified-sid-is-already-in-use-error-in-oracle-how-to-fix) <br>
 [Error](https://youtu.be/5EQ2ulnQsow)
 
+**SSMS Server Name Not Showing** [source](https://youtu.be/bgB2xeB6IM8)
+**SSMS: The Certificate Chain was issued by an authority that is not trusted** [source](https://youtu.be/QJ2h9-PrLXQ)
+
 
