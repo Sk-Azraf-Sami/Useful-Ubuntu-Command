@@ -38,6 +38,12 @@ tree -a
 4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
 5.Click Ubuntu and hopefully it should take you to the grub boot menu.
 
+**Kazam screen recording issue**<br>
+<i>Need to switch wayland to xorg</i> <br>
+[solve issue](https://youtu.be/YuR54xntipY)
+and [wayland vs xorg](https://youtu.be/cd_B9e3PBQU)
+and [which need to use](https://youtu.be/U_MBJcD3SFI)
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
