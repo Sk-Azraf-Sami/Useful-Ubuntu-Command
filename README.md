@@ -44,6 +44,12 @@ tree -a
 and [wayland vs xorg](https://youtu.be/cd_B9e3PBQU)
 and [which need to use](https://youtu.be/U_MBJcD3SFI)
 
+**Open .rar file in Ubuntu** [source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
+<i>Need to install utility</i>
+```
+sudo apt install unrar
+```
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
