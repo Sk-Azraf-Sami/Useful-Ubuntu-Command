@@ -49,6 +49,25 @@ and [which need to use](https://youtu.be/U_MBJcD3SFI)
 ```
 sudo apt install unrar
 ```
+**"/dev/kvm is not found" [Android Studio]** [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing)
+1. Check if kvm is on device
+```
+kvm-ok
+```
+2. If need to install kvm
+```
+sudo apt-get install qemu-kvm
+```
+3. Now restart the computer
+4. Press `F2` key to enter `BIOS` [for lenevo ideapad320]
+5. Now in `BIOS`, go to `Configuration` tab.
+6. Then enter `Intel Virtualization Mode` and `Enabled` it.
+7. Then save these settings. 
+8. Now check it again: 
+```
+kvm-ok
+```
+
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
