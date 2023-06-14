@@ -67,7 +67,45 @@ sudo apt-get install qemu-kvm
 ```
 kvm-ok
 ```
-
+**Install dotnet-sdk** [source](https://askubuntu.com/questions/1422947/why-dont-any-of-these-methods-work-for-installing-net-core-sdk-runtime-on-22?rq=1)
+1. Remove all .NET packages
+```
+sudo apt remove 'dotnet*'
+sudo apt remove 'aspnetcore*'
+```
+2. Create the file:
+```
+sudo touch /etc/apt/preferences.d/dotnet.pref
+```
+3. Become root user
+```
+sudo -i
+```
+4. Give permission this file to write content:
+```
+sudo chmod o+w /etc/apt/preferences.d/dotnet.pref
+```
+5. logout from root user
+```
+cd
+root@lenovo-lenovo-ideapad-320-15ikb:~# logout
+```
+6. Then Install :
+```
+sudo apt update
+sudo apt install dotnet-sdk-7.0
+```
+7. And I got the last version of the SDK:
+```
+dotnet --list-sdks 7.0 [/usr/share/dotnet/sdk]
+```
+8. Now check dotnet version
+```
+dotnet --version
+```
+```
+dotnet --info
+```
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
