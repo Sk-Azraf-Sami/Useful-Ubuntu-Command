@@ -107,6 +107,109 @@ dotnet --version
 dotnet --info
 ```
 
+**Uninstall Node.js**
+<br>
+If you want to uninstall Node.js from your Ubuntu system, you can follow these steps:
+
+1. **Remove Node.js:**
+
+   Open a terminal and run the following command to remove the Node.js package:
+
+   ```bash
+   sudo apt remove nodejs
+   ```
+
+2. **Remove npm:**
+
+   Run the following command to remove npm (Node Package Manager):
+
+   ```bash
+   sudo apt remove npm
+   ```
+
+3. **Remove Unused Dependencies:**
+
+   Sometimes, there might be residual dependencies left behind. You can use the following command to remove any unused packages and dependencies:
+
+   ```bash
+   sudo apt autoremove
+   ```
+
+4. **Remove Configuration Files:**
+
+   The above steps will remove the Node.js and npm packages, but the configuration files might still be present. If you want to remove all associated configuration files as well, you can run:
+
+   ```bash
+   sudo apt purge nodejs npm
+   ```
+
+5. **Clean Cache:**
+
+   You can also clean the apt cache to free up disk space:
+
+   ```bash
+   sudo apt clean
+   ```
+
+6. **Verify Removal:**
+
+   To verify that Node.js and npm have been removed, you can try running their version commands. If they have been successfully uninstalled, you should get a command not found error:
+
+   ```bash
+   node -v
+   npm -v
+   ```
+
+Keep in mind that these commands will uninstall Node.js and npm installed via the system's package manager. If you've installed Node.js using other methods, such as NodeSource or nvm, you might need to follow different steps to uninstall them.
+
+**Install Node.js** [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
+```
+sudo snap install node --classic
+```
+Installing NVM also help to manage the version of node. 
+
+**Start React Project**
+<br>
+Creating a React app using Visual Studio Code (VS Code) involves a few steps. Here's a basic guide on how to set up a new React app using the Create React App tool:
+
+1. **Install Node.js:** React apps require Node.js and npm (Node Package Manager). If you don't have them installed, download and install them from the official Node.js website: https://nodejs.org/
+
+2. **Install Create React App:** Create React App is a tool that sets up a new React project with a predefined folder structure and configuration. Open a terminal in VS Code and run the following command to install Create React App globally:
+
+   ```bash
+   npm install -g create-react-app
+   ```
+
+3. **Create a New React App:** Once Create React App is installed, you can create a new React app by running the following command in the terminal:
+
+   ```bash
+   npx create-react-app my-react-app
+   ```
+
+   Replace `my-react-app` with the name you want for your app.
+
+4. **Navigate to the App Directory:** After the app is created, navigate to the app's directory using the following command:
+
+   ```bash
+   cd my-react-app
+   ```
+
+5. **Start the Development Server:** To start the development server and run your React app, use the following command:
+
+   ```bash
+   npm start
+   ```
+
+   This will open a new browser window with your React app running.
+
+6. **Edit in VS Code:** You can now open the entire project folder in Visual Studio Code to edit your React app. Open VS Code, then go to `File > Open Folder` and select the folder of your React app (the one you named in step 3).
+
+That's it! You now have a new React app set up and running, and you can start building your app by editing the files in the `src` folder.
+
+Remember, this is just a basic setup. As your app grows, you may need to learn about more advanced topics like state management, routing, and more. React's official documentation is a great resource to dive deeper into these topics: https://reactjs.org/docs/getting-started.html
+
+Additionally, if you're more comfortable with using the command line, you can achieve the same steps by opening a terminal outside of VS Code and executing the commands there. VS Code's integrated terminal is just a convenient way to run these commands without switching to a separate terminal window.
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
