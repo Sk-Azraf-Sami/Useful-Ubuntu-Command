@@ -210,6 +210,11 @@ Remember, this is just a basic setup. As your app grows, you may need to learn a
 
 Additionally, if you're more comfortable with using the command line, you can achieve the same steps by opening a terminal outside of VS Code and executing the commands there. VS Code's integrated terminal is just a convenient way to run these commands without switching to a separate terminal window.
 
+**Unmet dependencies with no packages (broken package)**
+```bash
+sudo apt --fix-broken install
+```
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
