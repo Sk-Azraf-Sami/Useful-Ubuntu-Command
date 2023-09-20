@@ -214,6 +214,14 @@ Additionally, if you're more comfortable with using the command line, you can ac
 ```bash
 sudo apt --fix-broken install
 ```
+**Install SSH**
+```bash
+sudo apt install openssh-server 
+sudo systemctl status ssh 
+ctrl+c to exit 
+sudo ufw allow ssh 
+get ip address: ip a
+```
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
