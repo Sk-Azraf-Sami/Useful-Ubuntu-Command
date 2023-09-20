@@ -222,6 +222,42 @@ ctrl+c to exit
 sudo ufw allow ssh 
 get ip address: ip a
 ```
+## Install eDEX-UI [source](https://www.geeksforgeeks.org/edex-ui-the-tron-inspired-terminal-emulator-for-linux/)
+**To install eDEX-UI, download the binary files for installation using wget command**
+```bash
+wget -c https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.Linux.x86_64.AppImage
+```
+**After downloading go to the downloaded directory and use chmod command to provide the execute permission.**
+```bash
+chmod +x eDEX-UI.Linux.x86_64.AppImage
+```
+The error message you're encountering is related to FUSE (Filesystem in Userspace) not being available on your system. AppImages often use FUSE to provide a more seamless execution environment. To resolve this issue, you can follow these steps:
+
+1. **Install FUSE**: You need to install FUSE on your Linux system. The package name may vary depending on your Linux distribution. For example, on Ubuntu or Debian-based systems, you can use:
+
+   ```bash
+   sudo apt-get install fuse
+   ```
+
+   On Red Hat-based systems like Fedora or CentOS, you can use:
+
+   ```bash
+   sudo dnf install fuse
+   ```
+
+2. **Load FUSE Kernel Module**: After installing FUSE, you might need to load the FUSE kernel module. You can do this by running:
+
+   ```bash
+   sudo modprobe fuse
+   ```
+
+3. **Run the AppImage**: Once FUSE is installed and the kernel module is loaded, try running your AppImage again:
+
+   ```bash
+   ./eDEX-UI.Linux.x86_64.AppImage
+   ```
+
+If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
