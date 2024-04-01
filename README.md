@@ -259,6 +259,20 @@ The error message you're encountering is related to FUSE (Filesystem in Userspac
 
 If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
+**Error mounting /dev/sdb1 at /media/ on Ubuntu** 
+
+Ensure that the ntfs-3g package is installed on your system. You can install it using the following command:
+```bash
+sudo apt update
+sudo apt install ntfs-3g
+```
+This command will update your package lists and install ntfs-3g, which includes the ntfsfix utility.
+Then use this command: 
+```bash
+sudo ntfsfix /dev/sdb1 
+```
+Ref: [Link](https://askubuntu.com/questions/586308/error-mounting-dev-sdb1-at-media-on-ubuntu-14-04-lts) 
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
