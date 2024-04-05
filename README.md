@@ -17,7 +17,7 @@ pkill -9 vlc
 ```
 rename 's/[^a-zA-Z0-9_-]/_/g' *
 ```
-**Get a list of all files in folder and sub-folder in a file:** [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
+## Get a list of all files in folder and sub-folder in a file: [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
 <br>
 1. This will make a file called filename1 in the current directory, containing a full directory listing of the current directory and all of the sub-directories under it.
 ```
@@ -31,25 +31,25 @@ find ~
 ```
 tree -a
 ```
-**Dual-boot boot menu does not show up** [source](https://askubuntu.com/questions/717904/dual-boot-boot-menu-does-not-show-up-after-installing-ubuntu-15-10-alongside-win)
+## Dual-boot boot menu does not show up [source](https://askubuntu.com/questions/717904/dual-boot-boot-menu-does-not-show-up-after-installing-ubuntu-15-10-alongside-win)
 >1.On Windows 10, go to the start menu.<br>
 2.Search and open Recovery Options. The description for it should say System settings.<br>
 3.Under Advanced startup click Restart now.<br>
 4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
 5.Click Ubuntu and hopefully it should take you to the grub boot menu.
 
-**Kazam screen recording issue**<br>
+## Kazam screen recording issue <br>
 <i>Need to switch wayland to xorg</i> <br>
 [solve issue](https://youtu.be/YuR54xntipY)
 and [wayland vs xorg](https://youtu.be/cd_B9e3PBQU)
 and [which need to use](https://youtu.be/U_MBJcD3SFI)
 
-**Open .rar file in Ubuntu** [source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
+## Open .rar file in Ubuntu [source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
 <i>Need to install utility</i>
 ```
 sudo apt install unrar
 ```
-**"/dev/kvm is not found" [Android Studio]** [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing)
+## "/dev/kvm is not found" [Android Studio] [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing)
 1. Check if kvm is on device
 ```
 kvm-ok
@@ -67,7 +67,7 @@ sudo apt-get install qemu-kvm
 ```
 kvm-ok
 ```
-**Install dotnet-sdk** [source](https://askubuntu.com/questions/1422947/why-dont-any-of-these-methods-work-for-installing-net-core-sdk-runtime-on-22?rq=1)
+## Install dotnet-sdk [source](https://askubuntu.com/questions/1422947/why-dont-any-of-these-methods-work-for-installing-net-core-sdk-runtime-on-22?rq=1)
 1. Remove all .NET packages
 ```
 sudo apt remove 'dotnet*'
@@ -107,7 +107,7 @@ dotnet --version
 dotnet --info
 ```
 
-**Uninstall Node.js**
+## Uninstall Node.js
 <br>
 If you want to uninstall Node.js from your Ubuntu system, you can follow these steps:
 
@@ -162,7 +162,7 @@ If you want to uninstall Node.js from your Ubuntu system, you can follow these s
 
 Keep in mind that these commands will uninstall Node.js and npm installed via the system's package manager. If you've installed Node.js using other methods, such as NodeSource or nvm, you might need to follow different steps to uninstall them.
 
-**Install Node.js** [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
+## Install Node.js [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
 ```
 sudo snap install node --classic
 ```
@@ -210,7 +210,7 @@ Remember, this is just a basic setup. As your app grows, you may need to learn a
 
 Additionally, if you're more comfortable with using the command line, you can achieve the same steps by opening a terminal outside of VS Code and executing the commands there. VS Code's integrated terminal is just a convenient way to run these commands without switching to a separate terminal window.
 
-## Unmet dependencies with no packages (broken package)**
+## Unmet dependencies with no packages (broken package)
 ```bash
 sudo apt --fix-broken install
 ```
@@ -259,7 +259,7 @@ The error message you're encountering is related to FUSE (Filesystem in Userspac
 
 If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
-## Error mounting /dev/sdb1 at /media/ on Ubuntu** 
+## Error mounting /dev/sdb1 at /media/ on Ubuntu
 
 Ensure that the ntfs-3g package is installed on your system. You can install it using the following command:
 ```bash
@@ -272,6 +272,11 @@ Then use this command:
 sudo ntfsfix /dev/sdb1 
 ```
 Ref: [Link](https://askubuntu.com/questions/586308/error-mounting-dev-sdb1-at-media-on-ubuntu-14-04-lts) 
+
+## Install Ganache: 
+ Downalod appimage for linux from this website: https://archive.trufflesuite.com/ganache/ <br>
+ Then follow these steps: https://askubuntu.com/a/1266728 and https://youtu.be/_oAKEzue_Ig?si=WvEf6FmX5Mfc3geq
+ Then enter this command `sudo apt install libfuse2` because https://askubuntu.com/a/1459847
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
