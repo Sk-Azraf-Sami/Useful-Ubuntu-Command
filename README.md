@@ -210,7 +210,7 @@ Remember, this is just a basic setup. As your app grows, you may need to learn a
 
 Additionally, if you're more comfortable with using the command line, you can achieve the same steps by opening a terminal outside of VS Code and executing the commands there. VS Code's integrated terminal is just a convenient way to run these commands without switching to a separate terminal window.
 
-**Unmet dependencies with no packages (broken package)**
+## Unmet dependencies with no packages (broken package)**
 ```bash
 sudo apt --fix-broken install
 ```
@@ -259,7 +259,7 @@ The error message you're encountering is related to FUSE (Filesystem in Userspac
 
 If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
-**Error mounting /dev/sdb1 at /media/ on Ubuntu** 
+## Error mounting /dev/sdb1 at /media/ on Ubuntu** 
 
 Ensure that the ntfs-3g package is installed on your system. You can install it using the following command:
 ```bash
