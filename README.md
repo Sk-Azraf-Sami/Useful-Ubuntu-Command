@@ -275,9 +275,9 @@ sudo ntfsfix /dev/sdb1
 Ref: [Link](https://askubuntu.com/questions/586308/error-mounting-dev-sdb1-at-media-on-ubuntu-14-04-lts) 
 
 ## Install Ganache: 
- Downalod appimage for linux from this website: https://archive.trufflesuite.com/ganache/ <br>
- Then follow these steps: https://askubuntu.com/a/1266728 and https://youtu.be/_oAKEzue_Ig?si=WvEf6FmX5Mfc3geq
- Then enter this command `sudo apt install libfuse2` because https://askubuntu.com/a/1459847
+ 1. Downalod appimage for linux from this website: https://archive.trufflesuite.com/ganache/ 
+ 2. Then follow these steps: https://askubuntu.com/a/1266728 and https://youtu.be/_oAKEzue_Ig?si=WvEf6FmX5Mfc3geq
+ 3. Then enter this command `sudo apt install libfuse2` because https://askubuntu.com/a/1459847
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
