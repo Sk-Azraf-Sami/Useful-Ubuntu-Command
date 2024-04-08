@@ -279,6 +279,18 @@ Ref: [Link](https://askubuntu.com/questions/586308/error-mounting-dev-sdb1-at-me
  2. Then follow these steps: https://askubuntu.com/a/1266728 and https://youtu.be/_oAKEzue_Ig?si=WvEf6FmX5Mfc3geq
  3. Then enter this command `sudo apt install libfuse2` because https://askubuntu.com/a/1459847
 
+## Settings Application not showing or missing on Ubuntu 22.04 LTS 
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt install --reinstall gnome-control-center
+```
+```bash
+gnome-control-center display 
+```
+Ref: [YouTube](https://youtu.be/hM2-BeDJTLU?si=-gy6EXiLfyJZL_Zf)
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
