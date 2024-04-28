@@ -164,6 +164,57 @@ If you want to uninstall Node.js from your Ubuntu system, you can follow these s
 Keep in mind that these commands will uninstall Node.js and npm installed via the system's package manager. If you've installed Node.js using other methods, such as NodeSource or nvm, you might need to follow different steps to uninstall them.
 
 ## Install Node.js [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
+**Way-1:** <br>
+Installing NVM help to manage the version of node. <br>
+If you want to use `nvm` to manage Node.js versions and have the Node.js binaries installed in the `/usr/bin/node` directory, you can do so by manually configuring `nvm` to use that directory. Here's how:
+
+1. **Install `nvm`:**
+
+    ```bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    ```
+
+    This command will download and run the `nvm` installation script.
+
+2. **Close and reopen your terminal**:
+
+    This is necessary to ensure that the changes made by `nvm` are applied.
+
+3. **Set `NVM_DIR` environment variable**:
+
+    Before installing Node.js using `nvm`, you need to set the `NVM_DIR` environment variable to `/usr/bin/node`. This will instruct `nvm` to use `/usr/bin/node` as the installation directory.
+
+    You can add the following line to your `~/.bashrc` or `~/.bash_profile` file:
+
+    ```bash
+    export NVM_DIR="/usr/bin/node"
+    ```
+
+    Then, reload the file:
+
+    ```bash
+    source ~/.bashrc
+    ```
+
+4. **Install Node.js using `nvm`**:
+
+    Now, you can use `nvm` to install Node.js, and it will be installed in the `/usr/bin/node` directory.
+
+    ```bash
+    nvm install node
+    ```
+
+5. **Verify the installation**:
+
+    ```bash
+    node --version
+    ```
+
+    This should now display the version of Node.js that you installed.
+
+By following these steps, you can use `nvm` to manage Node.js versions while having the binaries installed in the `/usr/bin/node` directory.
+
+**Way-2(not prefer)** <br>
 ```
 sudo snap install node --classic
 ```
