@@ -108,6 +108,21 @@ dotnet --version
 dotnet --info
 ```
 
+## Open file with text editor 
+
+```bash
+xdg-open ~/.npmrc
+```
+```bash
+gedit ~/.npmrc
+```
+```bash
+nano ~/.npmrc
+```
+```bash
+vi ~/.npmrc
+```
+
 ## Uninstall Node.js
 <br>
 If you want to uninstall Node.js from your Ubuntu system, you can follow these steps:
