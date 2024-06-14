@@ -357,6 +357,26 @@ gnome-control-center display
 ```
 Ref: [YouTube](https://youtu.be/hM2-BeDJTLU?si=-gy6EXiLfyJZL_Zf)
 
+## Restarting of IBus (Avro is not working)
+Intelligent Input Bus (IBus) is an input method framework for multilingual input in Linux and Unix-like operating systems. It allows users to easily switch between keyboard layouts and type non-Latin characters using a keyboard that doesn't natively support them. IBus also provides a user-friendly input method user interface and can help developers easily develop input methods.
+providing features such as:
+
+- A unified user interface for all languages.
+- The ability to use multiple input methods within the same application.
+- A modularized input method architecture, allowing developers to add new input methods easily.
+- Support for complex input methods, often required for Asian languages.
+In a nutshell, if you're using a language that requires complex text input, IBus helps you type in that language.
+
+You can restart the ibus daemon on Ubuntu by using the following command in the terminal:
+```bash
+ibus-daemon -drx
+```
+
+Here's what each option does:
+- `-d` makes the daemon run in the background.
+- `-r` makes the daemon restart.
+- `-x` makes the daemon not register itself with the session manager.
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
