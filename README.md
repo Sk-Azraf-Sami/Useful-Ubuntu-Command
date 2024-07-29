@@ -20,8 +20,8 @@ rename 's/[^a-zA-Z0-9_-]/_/g' *
 
 ## Internet Connection
 
-**Connect Ethernet Directly to Laptop/Desktop** <br>
-Solution-1: (Works for me) ⭐ <br> 
+**Connect Ethernet Directly to Laptop/Desktop** <br> <br>
+**Solution-1: (Works for me)** ⭐ <br> 
 Using network-manager-cli
 ```bash
 nmcli con edit type pppoe con-name any_name
@@ -60,7 +60,7 @@ Now this connection is in settings of "network" and also in "Advanced Network Co
 ![image](https://github.com/user-attachments/assets/5e4030bb-9a03-43b5-85df-796542ebcb0b)
 <br> 
 Screenshot from  "Advanced Network Configuration" application.
-<br> 
+<br> <br> 
 **Solution-2:** (Don't recommended, failed to work!)
 Using `pppoeconf` <br> 
 1st Install `pppoeconf`
