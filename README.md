@@ -17,6 +17,68 @@ pkill -9 vlc
 ```
 rename 's/[^a-zA-Z0-9_-]/_/g' *
 ```
+
+## Internet Connection
+
+**Connect Ethernet Directly to Laptop/Desktop** <br>
+Solution-1: (Works for me) <br>
+Using network-manager-cli
+```bash
+nmcli con edit type pppoe con-name any_name
+```
+Then set username which is provided by ISP 
+```bash
+set pppoe.username 883/1-Sami-4A
+```
+Then set password which is provided by ISP 
+```bash
+set pppoe.password 3939
+```
+Then save it and quit <br> 
+Example: 
+```bash
+azraf@laptop:~$ nmcli con edit type pppoe con-name enp1s0
+
+===| nmcli interactive connection editor |===
+
+Adding a new 'pppoe' connection
+
+Type 'help' or '?' for available commands.
+Type 'print' to show all the connection properties.
+Type 'describe [<setting>.<prop>]' for detailed property description.
+
+You may edit the following settings: connection, pppoe, 802-3-ethernet (ethernet), ppp, 802-1x, ethtool, match, ipv4, ipv6, hostname, tc, proxy
+nmcli> set pppoe.username 883/1-Sami-4A
+nmcli> set pppoe.password 3939
+nmcli> save
+Saving the connection with 'autoconnect=yes'. That might result in an immediate activation of the connection.
+Do you still want to save? (yes/no) [yes] yes
+Connection 'enp1s0' (63a3b5fc-d863-425e-b9f4-fd0dda3a29ef) successfully saved.
+nmcli> quit
+```
+Now this connection is in settings of "network" and also in "Advanced Network Configuration" application.
+![image](https://github.com/user-attachments/assets/5e4030bb-9a03-43b5-85df-796542ebcb0b)
+<br> 
+Screenshot from  "Advanced Network Configuration" application.
+<br> 
+**Solution-2:** (Don't recommended, failed to work!)
+Using `pppoeconf` <br> 
+1st Install `pppoeconf`
+```bash
+sudo apt install pppoeconf
+```
+Run it, a graphical interface will appear, give username and password and set 'yes' for all question. 
+```bash
+sudo pppoeconf
+```
+To start/restart connection: 
+```bash
+sudo pon dsl-provider
+```
+
+
+
+
 ## Get a list of all files in folder and sub-folder in a file: [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
 <br>
 
