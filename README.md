@@ -61,7 +61,7 @@ Now this connection is in settings of "network" and also in "Advanced Network Co
 <br> 
 Screenshot from  "Advanced Network Configuration" application.
 <br> <br> 
-**Solution-2:** (Don't recommended, failed to work!)
+**Solution-2: (Don't recommended, failed to work!)**
 Using `pppoeconf` <br> 
 1st Install `pppoeconf`
 ```bash
@@ -76,8 +76,44 @@ To start/restart connection:
 sudo pon dsl-provider
 ```
 
+-------------------------------------------------------------
+**UBUNTU 22.04 HOTSPOT STOPS WORKING** 
+Solution Source: 
+1. https://blog.incompetent.me/2023/02/ubuntu-2204-hotspot-stops-working.html
+2. https://askubuntu.com/questions/1406149/cant-connect-to-ubuntu-22-04-hotspot
 
+Step 1: Add the required repository for downgrading <br>
+Run the following command-line to edit the repository
+```bash
+sudo gedit /etc/apt/sources.list
+```
+Add the following "old-releases" repository to the end of the file.
+```bash
+deb http://old-releases.ubuntu.com/ubuntu/ impish main restricted universe multiverse
+deb http://old-releases.ubuntu.com/ubuntu/ impish-updates main restricted universe multiverse
+deb http://old-releases.ubuntu.com/ubuntu/ impish-security main restricted universe multiverse
+```
 
+Step 2: Downgrade wpa_supplicant <br> 
+Run the following to fetch your package list and downgrade the package
+```bash
+sudo apt update
+sudo apt --allow-downgrades install wpasupplicant=2:2.9.0-21build1
+```
+Do make sure you have marked the package to prevent any update for now.
+```bash
+sudo apt-mark hold wpasupplicant
+```
+Step 3: Setup Hotspot <br> 
+Just run the following command to start or create a hotspot.
+```bash
+nmcli dev wifi hotspot
+```
+You can view the password via the the Network-Manager UI or you can always view it with the following command
+```bash
+nmcli dev wifi show-password
+```
+Now scan the QR code. 
 
 ## Get a list of all files in folder and sub-folder in a file: [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
 <br>
