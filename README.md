@@ -21,6 +21,9 @@ rename 's/[^a-zA-Z0-9_-]/_/g' *
 ## Internet Connection
 
 **Connect Ethernet Directly to Laptop/Desktop** <br> <br>
+Solution Source: <br> 
+https://askubuntu.com/questions/762372/dsl-connection-setup-in-ubuntu-16-04
+<br> <br> 
 **Solution-1: (Works for me)** ⭐ <br> 
 Using network-manager-cli
 ```bash
