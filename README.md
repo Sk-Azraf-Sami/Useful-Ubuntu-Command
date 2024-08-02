@@ -81,6 +81,7 @@ sudo pon dsl-provider
 
 -------------------------------------------------------------
 **UBUNTU 22.04 HOTSPOT STOPS WORKING** 
+<br>
 Solution Source: 
 1. https://blog.incompetent.me/2023/02/ubuntu-2204-hotspot-stops-working.html
 2. https://askubuntu.com/questions/1406149/cant-connect-to-ubuntu-22-04-hotspot
@@ -117,6 +118,90 @@ You can view the password via the the Network-Manager UI or you can always view 
 nmcli dev wifi show-password
 ```
 Now scan the QR code. 
+
+-----------------------------------------------------------
+**No wired connection - Wired unmanaged **
+Here is the updated solution tailored for Ubuntu 22.04: <br>
+Solution: 
+1. https://askubuntu.com/questions/1039233/no-wired-connection-wired-unmanaged-ubuntu-18-04
+2. https://askubuntu.com/questions/1371275/where-has-the-network-manager-service-in-21-10-gone
+
+### Step 1: Create Configuration File
+
+1. **Open Terminal:**
+   Open your terminal by pressing `Ctrl + Alt + T`.
+
+2. **Create the configuration file:**
+   Use the following command to create the `10-globally-managed-devices.conf` file:
+
+   ```bash
+   sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+   ```
+
+### Step 2: Edit the Network Configuration
+
+1. **Edit the NetworkManager configuration file:**
+   Use your preferred text editor to open the NetworkManager configuration file. For example, you can use `nano`:
+
+   ```bash
+   sudo nano /etc/NetworkManager/NetworkManager.conf
+   ```
+
+2. **Modify the `NetworkManager.conf` file:**
+   Look for the following line:
+
+   ```plaintext
+   [ifupdown]
+   managed=false
+   ```
+
+   Change `managed=false` to `managed=true` so that it looks like this:
+
+   ```plaintext
+   [ifupdown]
+   managed=true
+   ```
+
+3. **Save and exit:**
+   Save the changes and exit the text editor. If you are using `nano`, you can do this by pressing `Ctrl + O` to write the changes, then `Ctrl + X` to exit.
+
+### Step 3: Restart NetworkManager
+
+1. **Restart the NetworkManager service:**
+   After making the change, restart the NetworkManager service to apply the new configuration:
+
+   ```bash
+   sudo service NetworkManager restart
+   ```
+
+### Step 4: Verify the Connection
+
+1. **Check the status of your network interfaces:**
+   You can check the status of your network interfaces using the following command:
+
+   ```bash
+   nmcli device status
+   ```
+
+   This should show your wired network interface (usually `eth0` or `enp0s3`, etc.) as connected or managed.
+
+### Step 5: Additional Troubleshooting
+
+If the above steps do not resolve the issue, you can try the following additional troubleshooting steps:
+
+1. **Check for any available updates:**
+
+   ```bash
+   sudo apt update && sudo apt upgrade
+   ```
+
+2. **Restart your computer:**
+   Sometimes, a simple restart can resolve network issues.
+
+3. **Check the network cable and hardware:**
+   Ensure that the network cable is properly connected and that your network hardware is functioning correctly.
+
+Following these steps should help you resolve the "No wired connection - Wired unmanaged" issue in Ubuntu 22.04. If the problem persists, additional investigation into your specific network setup and hardware may be required.
 
 ## Get a list of all files in folder and sub-folder in a file: [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
 <br>
