@@ -1,4 +1,60 @@
 # Useful-Ubuntu-Command
+
+The `apt-get` and `apt` commands are used for package management in Debian-based Linux distributions like Ubuntu. While they often perform similar functions, there are some differences in usage and output. Here's a detailed comparison:
+
+### `sudo apt-get update` vs. `sudo apt update`
+
+**`sudo apt-get update`**:
+- This command updates the local package index with the latest changes from the repositories.
+- It fetches the most recent version of the package lists from the configured sources.
+- It does not install or upgrade any packages.
+- The output is more verbose compared to `apt`.
+
+**`sudo apt update`**:
+- This command also updates the local package index.
+- It performs the same function as `apt-get update` but with a more user-friendly output.
+- It includes additional progress information and colored output.
+- It is generally recommended for interactive use due to its improved readability and ease of use.
+
+### `sudo apt-get upgrade` vs. `sudo apt upgrade`
+
+**`sudo apt-get upgrade`**:
+- This command upgrades all installed packages to their latest available versions.
+- It will only upgrade existing packages; it does not install or remove any packages.
+- If a package upgrade requires the installation of new packages or the removal of existing ones, it will not proceed.
+
+**`sudo apt upgrade`**:
+- This command also upgrades all installed packages to their latest available versions.
+- It will install new packages and remove old ones if necessary to complete the upgrade.
+- It provides a more user-friendly output with progress information and colored text.
+- It is generally recommended for interactive use.
+
+### Summary of Differences
+
+- **User Interface**: `apt` commands provide a more user-friendly output with progress bars and colored text, making them easier to use for interactive purposes.
+- **Behavior**:
+  - `apt upgrade` is more flexible than `apt-get upgrade` as it can install new dependencies and remove obsolete packages.
+  - `apt-get upgrade` is more conservative and will not make any changes that require adding or removing packages.
+- **Usage**: 
+  - `apt` is generally preferred for interactive use due to its improved readability and usability features.
+  - `apt-get` is often used in scripts and automation due to its stability and backward compatibility.
+
+### Examples of Usage
+
+**Updating the package index:**
+```bash
+sudo apt-get update
+sudo apt update
+```
+
+**Upgrading installed packages:**
+```bash
+sudo apt-get upgrade
+sudo apt upgrade
+```
+
+Both sets of commands (`apt-get` and `apt`) ultimately perform the same underlying functions, but `apt` provides a more refined and user-friendly experience. For everyday use, `apt` is recommended, while `apt-get` remains valuable for scripting and compatibility with older systems.
+
 **Be A Root:**
 ```
 sudo -i
