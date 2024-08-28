@@ -1,7 +1,19 @@
 # Useful-Ubuntu-Command
 
-The `apt-get` and `apt` commands are used for package management in Debian-based Linux distributions like Ubuntu. While they often perform similar functions, there are some differences in usage and output. Here's a detailed comparison:
+## Table of Contents
+- [apt-get update and apt update]([apt-get-update-and-apt-update])
+- [Basic Commands](basic-commands)
+- [Internet Connection](#internet-connection)
+- [Get a list of all files in folder and sub-folder in a file](get-a-list-of-all-files-in-folder-and-sub-folder-in a-file)
+- [Dual-boot menu does not show up](#dual-boot-menu-does-not-show-up)
+- [Install-dotnet-sdk](#install-dotnet-sdk)
+- [Open file with text editor](#open-file-with-text-editor)
+- [Install and Uninstall Nodejs](install-and-uninstall-nodejs)
+- [Start React Project](start-react-project)
+  
+##  [apt-get update and apt update]([apt-get-update-and-apt-update])
 
+The `apt-get` and `apt` commands are used for package management in Debian-based Linux distributions like Ubuntu. While they often perform similar functions, there are some differences in usage and output. Here's a detailed comparison:
 ### `sudo apt-get update` vs. `sudo apt update`
 
 **`sudo apt-get update`**:
@@ -55,6 +67,8 @@ sudo apt upgrade
 
 Both sets of commands (`apt-get` and `apt`) ultimately perform the same underlying functions, but `apt` provides a more refined and user-friendly experience. For everyday use, `apt` is recommended, while `apt-get` remains valuable for scripting and compatibility with older systems.
 
+## [Basic Commands](basic-commands)
+
 **Be A Root:**
 ```
 sudo -i
@@ -74,7 +88,7 @@ pkill -9 vlc
 rename 's/[^a-zA-Z0-9_-]/_/g' *
 ```
 
-## Internet Connection
+## [Internet Connection](#internet-connection)
 
 **Connect Ethernet Directly to Laptop/Desktop** <br> <br>
 Solution Source: <br> 
@@ -259,7 +273,9 @@ If the above steps do not resolve the issue, you can try the following additiona
 
 Following these steps should help you resolve the "No wired connection - Wired unmanaged" issue in Ubuntu 22.04. If the problem persists, additional investigation into your specific network setup and hardware may be required.
 
-## Get a list of all files in folder and sub-folder in a file: [source](https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055)
+## [Get a list of all files in folder and sub-folder in a file](get-a-list-of-all-files-in-folder-and-sub-folder-in a-file)
+
+Resource: https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055
 <br>
 
 1. This will make a file called filename1 in the current directory, containing a full directory listing of the current directory and all of the sub-directories under it.
@@ -274,7 +290,10 @@ find ~
 ```
 tree -a
 ```
-## Dual-boot boot menu does not show up [source](https://askubuntu.com/questions/717904/dual-boot-boot-menu-does-not-show-up-after-installing-ubuntu-15-10-alongside-win)
+## [Dual-boot menu does not show up](#dual-boot-menu-does-not-show-up)
+[source](https://askubuntu.com/questions/717904/dual-boot-boot-menu-does-not-show-up-after-installing-ubuntu-15-10-alongside-win)
+<br>
+
 >1.On Windows 10, go to the start menu.<br>
 2.Search and open Recovery Options. The description for it should say System settings.<br>
 3.Under Advanced startup click Restart now.<br>
@@ -310,7 +329,9 @@ sudo apt-get install qemu-kvm
 ```
 kvm-ok
 ```
-## Install dotnet-sdk [source](https://askubuntu.com/questions/1422947/why-dont-any-of-these-methods-work-for-installing-net-core-sdk-runtime-on-22?rq=1)
+## [Install-dotnet-sdk](#install-dotnet-sdk)
+[source](https://askubuntu.com/questions/1422947/why-dont-any-of-these-methods-work-for-installing-net-core-sdk-runtime-on-22?rq=1)
+<br>
 1. Remove all .NET packages
 ```
 sudo apt remove 'dotnet*'
@@ -350,7 +371,7 @@ dotnet --version
 dotnet --info
 ```
 
-## Open file with text editor 
+## [Open file with text editor](#open-file-with-text-editor) 
 
 ```bash
 xdg-open ~/.npmrc
@@ -364,8 +385,9 @@ nano ~/.npmrc
 ```bash
 vi ~/.npmrc
 ```
+## [Install and Uninstall Nodejs](install-and-uninstall-nodejs)
 
-## Uninstall Node.js
+### Uninstall Node.js
 <br>
 If you want to uninstall Node.js from your Ubuntu system, you can follow these steps:
 
@@ -420,7 +442,7 @@ If you want to uninstall Node.js from your Ubuntu system, you can follow these s
 
 Keep in mind that these commands will uninstall Node.js and npm installed via the system's package manager. If you've installed Node.js using other methods, such as NodeSource or nvm, you might need to follow different steps to uninstall them.
 
-## Install Node.js [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
+### Install Node.js [source](https://www.youtube.com/watch?v=KtTe_ckT3iM&t=559s)
 **Way-1:** <br>
 Installing NVM help to manage the version of node. <br>
 If you want to use `nvm` to manage Node.js versions and have the Node.js binaries installed in the `/usr/bin/node` directory, you can do so by manually configuring `nvm` to use that directory. Here's how:
@@ -477,7 +499,7 @@ sudo snap install node --classic
 ```
 Installing NVM also help to manage the version of node. 
 
-**Start React Project**
+## [Start React Project](start-react-project)
 <br>
 Creating a React app using Visual Studio Code (VS Code) involves a few steps. Here's a basic guide on how to set up a new React app using the Create React App tool:
 
@@ -523,7 +545,7 @@ Additionally, if you're more comfortable with using the command line, you can ac
 ```bash
 sudo apt --fix-broken install
 ```
-**Install SSH**
+## Install SSH
 ```bash
 sudo apt install openssh-server 
 sudo systemctl status ssh 
