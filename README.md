@@ -20,6 +20,7 @@
 - [Install Ganache](#install-ganache)
 - [Settings Application not showing](#settings-application-not-showing)
 - [Restarting of IBus-Avro is not working](#restarting-of-ibus-avro-is-not-working)
+- [Laravel Setup](#laravel-setup)
   
 ## [apt-get update and apt update](#apt-get-update-and-apt-update)
 
@@ -657,6 +658,79 @@ Here's what each option does:
 - `-d` makes the daemon run in the background.
 - `-r` makes the daemon restart.
 - `-x` makes the daemon not register itself with the session manager.
+
+## [Laravel Setup](#laravel-setup)
+
+### Resources: 
+1. https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu
+2. https://community.time4vps.com/discussion/717/how-to-install-laravel-on-ubuntu
+3. [How to run Laravel project Downloaded from GitHub](https://youtu.be/9qaiY3ycpwY?si=dd1NZUmWKXp2UCaa)
+4. [Two ways to delete mysql database in mysql phpmyadmin](https://youtu.be/A7ZDFusBgJg?si=fk5mv1FXefVL0dJO)
+5. [Xampp server (Apache, MYSQL) Running Problem in Ubuntu 18.04](https://youtu.be/EsfE1_jDc6o?si=GnXPk_oQbdMLuaof)
+
+## Install Apache
+```bash
+apt install apache2
+```
+
+### Install PHP 
+```bash
+sudo add-apt-repository ppa:ondrej/php
+sudo apt install php8.2 php8.2-cli php8.2-fpm php8.2-mbstring php8.2-xml php8.2-curl php8.2-zip
+sudo update-alternatives --set php /usr/bin/php8.2
+sudo apt-get install php8.2-mysql
+php -v
+```
+## Install Composer
+Next, we need to install Composer which is package manager for PHP. Run this command:
+```bash
+curl -sS https://getcomposer.org/installer | php
+```
+Now you need to move the downloaded file to the usr/local/bin/:
+```bash
+mv composer.phar /usr/local/bin/composer
+```
+Give the composer execute rights:
+```bash
+chmod +x /usr/local/bin/composer
+```
+To check if Composer was installed, run this command:
+```bash
+composer --version
+```
+
+### Install XAMPP 
+Download XAMPP from here: https://www.apachefriends.org/
+```bash
+cd
+cd Downloads
+sudo chmod 755 xampp-linux-x64-8.2.12-0-installer.run
+sudo ./ xampp-linux-x64-8.2.12-0-installer.run
+```
+
+#### If apache web server is not starting in XAMPP
+```bash
+sudo apachectl stop
+```
+####  If mysql Database is not starting in XAMPP
+```bash
+sudo service mysql stop
+```
+
+### Install phpMyAdmin
+```bash
+sudo apt install phpmyadmin
+```
+
+### Start phpMyAdmin
+```bash
+http://localhost/phpmyadmin/
+```
+
+### Start Laravel Project
+```bash
+ php artisan serve
+```
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
