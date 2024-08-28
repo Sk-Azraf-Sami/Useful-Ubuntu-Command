@@ -1,27 +1,27 @@
 # Useful-Ubuntu-Command
 
 ## Table of Contents
-- [apt-get update and apt update]([apt-get-update-and-apt-update])
-- [Basic Commands](basic-commands)
+- [apt-get update and apt update](#apt-get-update-and-apt-update)
+- [Basic Commands](#basic-commands)
 - [Internet Connection](#internet-connection)
-- [Get a list of all files](get-a-list-of-all-files)
+- [Get a list of all files](#get-a-list-of-all-files)
 - [Dual-boot menu does not show up](#dual-boot-menu-does-not-show-up)
-- [Kazam screen recording issue](Kazam-screen-recording-issue)
-- [Open .rar file in Ubuntu](open-.rar-file-in-Ubuntu)
-- [KVM Issue](kvm-issue)
+- [Kazam screen recording issue](#Kazam-screen-recording-issue)
+- [Open .rar file in Ubuntu](#open-.rar-file-in-Ubuntu)
+- [KVM Issue](#kvm-issue)
 - [Install-dotnet-sdk](#install-dotnet-sdk)
 - [Open file with text editor](#open-file-with-text-editor)
-- [Install and Uninstall Nodejs](install-and-uninstall-nodejs)
-- [Start React Project](start-react-project)
+- [Install and Uninstall Nodejs](#install-and-uninstall-nodejs)
+- [Start React Project](#start-react-project)
 - [Unmet dependencies](#unmet-dependencies)
-- [Install SSH](install-ssh)
+- [Install SSH](#install-ssh)
 - [Install eDEX-UI](#install-edex-ui)
-- [Error mounting](error-mounting)
-- [Install Ganache](install-ganache)
-- [Settings Application not showing](settings-application-not-showing)
-- [Restarting of IBus-Avro is not working](restarting-of-ibus-avro-is-not-working)
+- [Error mounting](#error-mounting)
+- [Install Ganache](#install-ganache)
+- [Settings Application not showing](#settings-application-not-showing)
+- [Restarting of IBus-Avro is not working](#restarting-of-ibus-avro-is-not-working)
   
-##  [apt-get update and apt update]([apt-get-update-and-apt-update])
+## [apt-get update and apt update](#apt-get-update-and-apt-update)
 
 The `apt-get` and `apt` commands are used for package management in Debian-based Linux distributions like Ubuntu. While they often perform similar functions, there are some differences in usage and output. Here's a detailed comparison:
 ### `sudo apt-get update` vs. `sudo apt update`
@@ -77,7 +77,7 @@ sudo apt upgrade
 
 Both sets of commands (`apt-get` and `apt`) ultimately perform the same underlying functions, but `apt` provides a more refined and user-friendly experience. For everyday use, `apt` is recommended, while `apt-get` remains valuable for scripting and compatibility with older systems.
 
-## [Basic Commands](basic-commands)
+## [Basic Commands](#basic-commands)
 
 **Be A Root:**
 ```
@@ -283,7 +283,7 @@ If the above steps do not resolve the issue, you can try the following additiona
 
 Following these steps should help you resolve the "No wired connection - Wired unmanaged" issue in Ubuntu 22.04. If the problem persists, additional investigation into your specific network setup and hardware may be required.
 
-## [Get a list of all files](get-a-list-of-all-files)
+## [Get a list of all files](#get-a-list-of-all-files)
 
 Resource: https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055
 <br>
@@ -310,20 +310,20 @@ tree -a
 4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
 5.Click Ubuntu and hopefully it should take you to the grub boot menu.
 
-## [Kazam screen recording issue](Kazam-screen-recording-issue)
+## [Kazam screen recording issue](#Kazam-screen-recording-issue)
 <i>Need to switch wayland to xorg</i> <br>
 [solve issue](https://youtu.be/YuR54xntipY)
 and [wayland vs xorg](https://youtu.be/cd_B9e3PBQU)
 and [which need to use](https://youtu.be/U_MBJcD3SFI)
 
-## [Open .rar file in Ubuntu](open-.rar-file-in-Ubuntu)
+## [Open .rar file in Ubuntu](#open-.rar-file-in-Ubuntu)
 [source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
 <i>Need to install utility</i>
 ```
 sudo apt install unrar
 ```
 
-## [KVM Issue](kvm-issue)
+## [KVM Issue](#kvm-issue)
 "/dev/kvm is not found" [Android Studio] [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing) <br>
 1. Check if kvm is on device
 ```
@@ -398,7 +398,7 @@ nano ~/.npmrc
 ```bash
 vi ~/.npmrc
 ```
-## [Install and Uninstall Nodejs](install-and-uninstall-nodejs)
+## [Install and Uninstall Nodejs](#install-and-uninstall-nodejs)
 
 ### Uninstall Node.js
 <br>
@@ -512,7 +512,7 @@ sudo snap install node --classic
 ```
 Installing NVM also help to manage the version of node. 
 
-## [Start React Project](start-react-project)
+## [Start React Project](#start-react-project)
 <br>
 Creating a React app using Visual Studio Code (VS Code) involves a few steps. Here's a basic guide on how to set up a new React app using the Create React App tool:
 
@@ -559,7 +559,7 @@ Unmet dependencies with no packages (broken package)
 ```bash
 sudo apt --fix-broken install
 ```
-## [Install SSH](install-ssh)
+## [Install SSH](#install-ssh)
 ```bash
 sudo apt install openssh-server 
 sudo systemctl status ssh 
@@ -605,7 +605,7 @@ The error message you're encountering is related to FUSE (Filesystem in Userspac
 
 If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
-## [Error mounting](error-mounting)
+## [Error mounting](#error-mounting)
 Error mounting /dev/sdb1 at /media/ on Ubuntu
 
 Ensure that the ntfs-3g package is installed on your system. You can install it using the following command:
@@ -638,7 +638,7 @@ gnome-control-center display
 ```
 Ref: [YouTube](https://youtu.be/hM2-BeDJTLU?si=-gy6EXiLfyJZL_Zf)
 
-## [Restarting of IBus-Avro is not working](restarting-of-ibus-avro-is-not-working)
+## [Restarting of IBus-Avro is not working](#restarting-of-ibus-avro-is-not-working)
 Intelligent Input Bus (IBus) is an input method framework for multilingual input in Linux and Unix-like operating systems. It allows users to easily switch between keyboard layouts and type non-Latin characters using a keyboard that doesn't natively support them. IBus also provides a user-friendly input method user interface and can help developers easily develop input methods.
 providing features such as:
 
