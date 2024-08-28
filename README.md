@@ -4,12 +4,22 @@
 - [apt-get update and apt update]([apt-get-update-and-apt-update])
 - [Basic Commands](basic-commands)
 - [Internet Connection](#internet-connection)
-- [Get a list of all files in folder and sub-folder in a file](get-a-list-of-all-files-in-folder-and-sub-folder-in a-file)
+- [Get a list of all files](get-a-list-of-all-files)
 - [Dual-boot menu does not show up](#dual-boot-menu-does-not-show-up)
+- [Kazam screen recording issue](Kazam-screen-recording-issue)
+- [Open .rar file in Ubuntu](open-.rar-file-in-Ubuntu)
+- [KVM Issue](kvm-issue)
 - [Install-dotnet-sdk](#install-dotnet-sdk)
 - [Open file with text editor](#open-file-with-text-editor)
 - [Install and Uninstall Nodejs](install-and-uninstall-nodejs)
 - [Start React Project](start-react-project)
+- [Unmet dependencies](#unmet-dependencies)
+- [Install SSH](install-ssh)
+- [Install eDEX-UI](#install-edex-ui)
+- [Error mounting](error-mounting)
+- [Install Ganache](install-ganache)
+- [Settings Application not showing](settings-application-not-showing)
+- [Restarting of IBus-Avro is not working](restarting-of-ibus-avro-is-not-working)
   
 ##  [apt-get update and apt update]([apt-get-update-and-apt-update])
 
@@ -273,7 +283,7 @@ If the above steps do not resolve the issue, you can try the following additiona
 
 Following these steps should help you resolve the "No wired connection - Wired unmanaged" issue in Ubuntu 22.04. If the problem persists, additional investigation into your specific network setup and hardware may be required.
 
-## [Get a list of all files in folder and sub-folder in a file](get-a-list-of-all-files-in-folder-and-sub-folder-in a-file)
+## [Get a list of all files](get-a-list-of-all-files)
 
 Resource: https://askubuntu.com/questions/188052/get-a-list-of-all-files-in-folder-and-sub-folder-in-a-file/188055#188055
 <br>
@@ -300,18 +310,21 @@ tree -a
 4.Click Use a device; it's description should say "Use a USB drive, network connection, or Windows recovery DVD".<br>
 5.Click Ubuntu and hopefully it should take you to the grub boot menu.
 
-## Kazam screen recording issue <br>
+## [Kazam screen recording issue](Kazam-screen-recording-issue)
 <i>Need to switch wayland to xorg</i> <br>
 [solve issue](https://youtu.be/YuR54xntipY)
 and [wayland vs xorg](https://youtu.be/cd_B9e3PBQU)
 and [which need to use](https://youtu.be/U_MBJcD3SFI)
 
-## Open .rar file in Ubuntu [source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
+## [Open .rar file in Ubuntu](open-.rar-file-in-Ubuntu)
+[source](https://linuxconfig.org/how-to-unrar-in-ubuntu)<br>
 <i>Need to install utility</i>
 ```
 sudo apt install unrar
 ```
-## "/dev/kvm is not found" [Android Studio] [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing)
+
+## [KVM Issue](kvm-issue)
+"/dev/kvm is not found" [Android Studio] [source](https://askubuntu.com/questions/564910/kvm-is-not-installed-on-this-machine-dev-kvm-is-missing) <br>
 1. Check if kvm is on device
 ```
 kvm-ok
@@ -541,11 +554,12 @@ Remember, this is just a basic setup. As your app grows, you may need to learn a
 
 Additionally, if you're more comfortable with using the command line, you can achieve the same steps by opening a terminal outside of VS Code and executing the commands there. VS Code's integrated terminal is just a convenient way to run these commands without switching to a separate terminal window.
 
-## Unmet dependencies with no packages (broken package)
+## [Unmet dependencies](#unmet-dependencies)
+Unmet dependencies with no packages (broken package)
 ```bash
 sudo apt --fix-broken install
 ```
-## Install SSH
+## [Install SSH](install-ssh)
 ```bash
 sudo apt install openssh-server 
 sudo systemctl status ssh 
@@ -553,7 +567,8 @@ ctrl+c to exit
 sudo ufw allow ssh 
 get ip address: ip a
 ```
-## Install eDEX-UI [source](https://www.geeksforgeeks.org/edex-ui-the-tron-inspired-terminal-emulator-for-linux/)
+## [Install eDEX-UI](#install-edex-ui)
+[source](https://www.geeksforgeeks.org/edex-ui-the-tron-inspired-terminal-emulator-for-linux/)
 **To install eDEX-UI, download the binary files for installation using wget command**
 ```bash
 wget -c https://github.com/GitSquared/edex-ui/releases/download/v2.2.2/eDEX-UI.Linux.x86_64.AppImage
@@ -590,7 +605,8 @@ The error message you're encountering is related to FUSE (Filesystem in Userspac
 
 If the issue persists after following these steps, you may want to check if there are any specific requirements or troubleshooting steps mentioned in the documentation or GitHub repository of the eDEX-UI application, as different AppImages may have their own requirements and dependencies.
 
-## Error mounting /dev/sdb1 at /media/ on Ubuntu
+## [Error mounting](error-mounting)
+Error mounting /dev/sdb1 at /media/ on Ubuntu
 
 Ensure that the ntfs-3g package is installed on your system. You can install it using the following command:
 ```bash
@@ -604,12 +620,13 @@ sudo ntfsfix /dev/sdb1
 ```
 Ref: [Link](https://askubuntu.com/questions/586308/error-mounting-dev-sdb1-at-media-on-ubuntu-14-04-lts) 
 
-## Install Ganache: 
+## [Install Ganache](install-ganache)
  1. Downalod appimage for linux from this website: https://archive.trufflesuite.com/ganache/ 
  2. Then follow these steps: https://askubuntu.com/a/1266728 and https://youtu.be/_oAKEzue_Ig?si=WvEf6FmX5Mfc3geq
  3. Then enter this command `sudo apt install libfuse2` because https://askubuntu.com/a/1459847
 
-## Settings Application not showing or missing on Ubuntu 22.04 LTS 
+## [Settings Application not showing](settings-application-not-showing)
+Settings Application not showing or missing on Ubuntu 22.04 LTS 
 ```bash
 sudo apt-get update
 ```
@@ -621,7 +638,7 @@ gnome-control-center display
 ```
 Ref: [YouTube](https://youtu.be/hM2-BeDJTLU?si=-gy6EXiLfyJZL_Zf)
 
-## Restarting of IBus (Avro is not working)
+## [Restarting of IBus-Avro is not working](restarting-of-ibus-avro-is-not-working)
 Intelligent Input Bus (IBus) is an input method framework for multilingual input in Linux and Unix-like operating systems. It allows users to easily switch between keyboard layouts and type non-Latin characters using a keyboard that doesn't natively support them. IBus also provides a user-friendly input method user interface and can help developers easily develop input methods.
 providing features such as:
 
