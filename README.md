@@ -732,6 +732,21 @@ http://localhost/phpmyadmin/
  php artisan serve
 ```
 
+### Project Directory and Start Project ⭐
+
+Project Directory will be `/opt/lampp/htdocs`
+
+```bash
+azraf@laptop:~/Downloads$ sudo ./xampp-linux-x64-8.2.12-0-installer.run
+azraf@laptop:~/Downloads$ cd
+azraf@laptop:~$ cd /opt/lampp
+azraf@laptop:/opt/lampp$ cd htdocs
+azraf@laptop:/opt/lampp/htdocs$ ls
+azraf@laptop:/opt/lampp/htdocs$ cd  TrioDynamics
+azraf@laptop:/opt/lampp/htdocs/TrioDynamics$ php artisan serve
+azraf@laptop:/opt/lampp/htdocs/TrioDynamics$ code .
+```
+
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
 Link: https://localhost:5500/em/login
