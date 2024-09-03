@@ -21,6 +21,8 @@
 - [Settings Application not showing](#settings-application-not-showing)
 - [Restarting of IBus-Avro is not working](#restarting-of-ibus-avro-is-not-working)
 - [Laravel Setup](#laravel-setup)
+- [Remove VLC](#remove-vlc)
+- []
   
 ## [apt-get update and apt update](#apt-get-update-and-apt-update)
 
@@ -746,6 +748,13 @@ azraf@laptop:/opt/lampp/htdocs$ cd  TrioDynamics
 azraf@laptop:/opt/lampp/htdocs/TrioDynamics$ php artisan serve
 azraf@laptop:/opt/lampp/htdocs/TrioDynamics$ code .
 ```
+## [Remove VLC](#remove-vlc)
+Since you mentioned "installing new VLC", and since dpkg cannot trace it, you probably installed it as a snap.
+```
+sudo snap remove vlc
+```
+should remove vlc installed with snap.
+Solution: https://askubuntu.com/questions/1284961/how-to-remove-vlc-from-computer-search-and-as-default-player
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
