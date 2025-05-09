@@ -758,7 +758,7 @@ sudo snap remove vlc
 should remove vlc installed with snap.
 Solution: https://askubuntu.com/questions/1284961/how-to-remove-vlc-from-computer-search-and-as-default-player
 
-# [mysql Error](#mysql-error)
+## [mysql Error](#mysql-error)
 1. Error-1: #1558 - Column count of mysql.proc is wrong. Expected 21, found 20. Please use mysql_upgrade to fix this error <br>
    Solution: [Here](https://stackoverflow.com/a/73882030/22856084)
 2. Error-2: Error Dropping Database (Can't rmdir '.test\', errno: 17)
