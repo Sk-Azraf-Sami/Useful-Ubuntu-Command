@@ -23,6 +23,7 @@
 - [Laravel Setup](#laravel-setup)
 - [Remove VLC](#remove-vlc)
 - [mysql Error](#mysql-error)
+- [Fingerprint Issue](#fingerprint-issue) 
   
   
 ## [apt-get update and apt update](#apt-get-update-and-apt-update)
@@ -762,6 +763,160 @@ Solution: https://askubuntu.com/questions/1284961/how-to-remove-vlc-from-compute
    Solution: [Here](https://stackoverflow.com/a/73882030/22856084)
 2. Error-2: Error Dropping Database (Can't rmdir '.test\', errno: 17)
    Solution: [Here](https://stackoverflow.com/a/26943349/22856084)
+
+
+## [Fingerprint Issue](#fingerprint-issue) 
+Enabling Fingerprint Authentication on 
+Lenovo IDEAPAD Slim-3i (Ubuntu)
+
+This guide helps you install and configure the fingerprint driver for your **Goodix 27c6:550a** sensor, fix the `symbol lookup` error in `fprintd`, and set up login authentication.
+
+---
+
+### 🛠️ Step 1: Check Device Info
+
+Run:
+
+```bash
+lsusb
+```
+
+Look for your fingerprint sensor (example):
+
+```
+Bus 003 Device 002: ID 27c6:550a Shenzhen Goodix Technology Co.,Ltd. FingerPrint
+```
+
+---
+
+### 📦 Step 2: Add the Required PPA
+
+```bash
+sudo add-apt-repository ppa:libfprint-tod1-group/ppa
+sudo apt update
+```
+
+---
+
+### 🔍 Step 3: Identify Available Driver
+
+```bash
+ubuntu-drivers list
+```
+
+You should see:
+
+```
+libfprint-2-tod1-goodix-550a
+```
+
+---
+
+### 📥 Step 4: Install the Driver
+
+```bash
+sudo apt install libfprint-2-tod1-goodix-550a
+```
+
+Alternatively:
+
+* Open **Software & Updates**
+* Go to **Additional Drivers**
+* Select **ELAN: Fingerprint Driver**
+* Click **Apply Changes**
+
+---
+
+### 🧹 Step 5: Fix fprintd Error (symbol lookup / status=127)
+
+#### 5.1 Remove Custom Libraries
+
+Search for leftover custom libraries:
+
+```bash
+sudo find /usr/local -name "libfprint*"
+```
+
+If found, remove them:
+
+```bash
+sudo rm /usr/local/lib/x86_64-linux-gnu/libfprint-2.so*
+```
+
+#### 5.2 Reinstall System Library
+
+```bash
+sudo apt reinstall libfprint-2-2
+sudo ldconfig
+```
+
+---
+
+#### 5.3 Verify Library Path
+
+Run:
+
+```bash
+ldd /usr/libexec/fprintd | grep libfprint
+```
+
+✅ Output must be:
+
+```
+libfprint-2.so.2 => /lib/x86_64-linux-gnu/libfprint-2.so.2
+```
+
+❌ If you still see `/usr/local/lib`, it means the old path is still prioritized.
+
+---
+
+### ✅ Step 6: Restart fprintd
+
+```bash
+sudo systemctl restart fprintd
+sudo systemctl status fprintd
+```
+
+If it starts successfully, continue.
+
+---
+
+### 🧪 Step 7: Enroll a Fingerprint
+
+```bash
+fprintd-enroll
+```
+
+Follow the prompt to scan your finger.
+
+---
+
+### 🔐 Step 8: Enable Fingerprint Authentication
+
+Run:
+
+```bash
+sudo pam-auth-update
+```
+
+* Use **Spacebar** to select `Fingerprint authentication`.
+* Press **Enter** to save.
+
+---
+
+### 🚪 Step 9: Test Login
+
+* Lock your screen or log out.
+* Try logging in using your fingerprint.
+
+---
+
+### 📝 References
+
+* [Ubuntu Fingerprint Wiki](https://wiki.ubuntu.com/Lenovo)
+* [Enable fingerprint login in Ubuntu (Goodix)](https://tec4tric.wordpress.com/2021/02/27/enable-fingerprint-login-in-ubuntu/)
+
+
 
 # Useful Windows-10 Command:
 **Install Oracle 21c** [source](https://www.youtube.com/watch?v=muKIX57rHuE&t=206s&ab_channel=AdamTech) <br>
